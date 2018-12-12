@@ -1,0 +1,8 @@
+D:\Projects\CS\CS-Util\Holidays\obj\Debug\netstandard2.0\Holidays.csproj.CoreCompileInputs.cache
+D:\Projects\CS\CS-Util\Holidays\obj\Debug\netstandard2.0\Holidays.AssemblyInfoInputs.cache
+D:\Projects\CS\CS-Util\Holidays\obj\Debug\netstandard2.0\Holidays.AssemblyInfo.cs
+D:\Projects\CS\CS-Util\Holidays\bin\Debug\netstandard2.0\Holidays.deps.json
+D:\Projects\CS\CS-Util\Holidays\bin\Debug\netstandard2.0\Holidays.dll
+D:\Projects\CS\CS-Util\Holidays\bin\Debug\netstandard2.0\Holidays.pdb
+D:\Projects\CS\CS-Util\Holidays\obj\Debug\netstandard2.0\Holidays.dll
+D:\Projects\CS\CS-Util\Holidays\obj\Debug\netstandard2.0\Holidays.pdb
