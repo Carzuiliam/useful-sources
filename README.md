@@ -2,15 +2,11 @@
 
 This is a project of a **C# library** that contains a group of useful methods that I use on some **ERP systems** when I need.
 
----------------------------------------------------------------------------------------------------------------------------------
-
 ## Libraries
 
 - **Holidays**, a library to find holidays for a given year.
 
 You may use only the sources available inside each _sources_ folder on each library folder, if you wish.
-
----------------------------------------------------------------------------------------------------------------------------------
 
 ## Requirements
 
@@ -18,8 +14,6 @@ To test the files:
 
 - **Visual Studio 2017** or above, available on https://visualstudio.microsoft.com/downloads/.
 - **.NET Framework 3.5** or above.
-
----------------------------------------------------------------------------------------------------------------------------------
 
 ## Licence
 
