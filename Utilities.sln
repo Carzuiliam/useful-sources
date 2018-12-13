@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Holidays", "Holidays\Holidays.csproj", "{C00E5030-E665-4C08-85CF-CF42D3AB00B6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "--- Tests ---", "Tests\--- Tests ---.csproj", "{20C600D6-247A-4229-9E7B-8DADFC9331D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{20C600D6-247A-4229-9E7B-8DADFC9331D5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViaCEP", "ViaCEP\ViaCEP.csproj", "{45AE77B8-CC41-4021-83E1-1B885471BFEA}"
 EndProject

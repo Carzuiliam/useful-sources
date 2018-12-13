@@ -1,8 +1,0 @@
-D:\Projects\CS\CS-Utilities\ViaCEP\bin\Debug\netstandard2.0\ViaCEP.deps.json
-D:\Projects\CS\CS-Utilities\ViaCEP\bin\Debug\netstandard2.0\ViaCEP.dll
-D:\Projects\CS\CS-Utilities\ViaCEP\bin\Debug\netstandard2.0\ViaCEP.pdb
-D:\Projects\CS\CS-Utilities\ViaCEP\obj\Debug\netstandard2.0\ViaCEP.csproj.CoreCompileInputs.cache
-D:\Projects\CS\CS-Utilities\ViaCEP\obj\Debug\netstandard2.0\ViaCEP.AssemblyInfoInputs.cache
-D:\Projects\CS\CS-Utilities\ViaCEP\obj\Debug\netstandard2.0\ViaCEP.AssemblyInfo.cs
-D:\Projects\CS\CS-Utilities\ViaCEP\obj\Debug\netstandard2.0\ViaCEP.dll
-D:\Projects\CS\CS-Utilities\ViaCEP\obj\Debug\netstandard2.0\ViaCEP.pdb
