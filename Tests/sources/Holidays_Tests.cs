@@ -32,8 +32,10 @@ namespace Tests
                 var result = HolidayBRA.IsHoliday(data);
 
                 var message = String.Format(
-                    newLine + "Expected for [{0}]: 'True'." + 
-                    newLine + "Obtained for [{0}]: '{1}'.", 
+                    newLine +
+                    newLine + "Expected for [{0}] --> [True]." + 
+                    newLine + "Obtained for [{0}] --> [{1}]." +
+                    newLine, 
                     data.ToShortDateString(), result
                 );
 
@@ -64,8 +66,10 @@ namespace Tests
                 var result = HolidayBRA.IsHoliday(data);
 
                 var message = String.Format(
-                    newLine + "Expected for [{0}]: 'False'." +
-                    newLine + "Obtained for [{0}]: '{1}'.",
+                    newLine +
+                    newLine + "Expected for [{0}] --> [False]." +
+                    newLine + "Obtained for [{0}] --> [{1}]." +
+                    newLine,
                     data.ToShortDateString(), result
                 );
 
@@ -89,8 +93,10 @@ namespace Tests
                 var result = HolidayBRA.IsHoliday(data.Key);
 
                 var message = String.Format(
-                    newLine + "Expected for [{0}]: '" + data + "'." +
-                    newLine + "Obtained for [{0}]: '{1}'.",
+                    newLine +
+                    newLine + "Expected for [{0}] --> [" + data + "]" +
+                    newLine + "Obtained for [{0}] --> [{1}]" +
+                    newLine,
                     data.Key.ToShortDateString(), result
                 );
 
