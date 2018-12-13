@@ -8,7 +8,7 @@ namespace Holidays
     public abstract class Holiday
     {
 
-        #region STATIC MEMBERS --------------------------------------------------------------------
+        #region Common Holidays' Dates ------------------------------------------------------------
 
         /// <summary>
         /// The DateTime when the New Year's Holiday ("Ano Novo") will ocurrs in current year.
@@ -32,7 +32,7 @@ namespace Holidays
 
         #endregion
 
-        #region STATIC METHODS --------------------------------------------------------------------
+        #region Commom Holidays' Calculation ------------------------------------------------------
 
         /// <summary>
         /// Gets the DateTime when the New Year's Holiday ("Ano Novo") will ocurrs in the given year.

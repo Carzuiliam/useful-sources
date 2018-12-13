@@ -7,7 +7,8 @@ namespace Holidays
     /// </summary>
     public class HolidayBRA : Holiday
     {
-        #region STATIC MEMBERS --------------------------------------------------------------------
+
+        #region Brazilian Holidays' Dates ---------------------------------------------------------
 
         /// <summary>
         /// The DateTime when the Corpus Christi's Holiday ("Corpus Christi") will ocurrs in current year.
@@ -46,7 +47,7 @@ namespace Holidays
 
         #endregion
 
-        #region STATIC METHODS --------------------------------------------------------------------
+        #region Brazilian Holidays' Calculation ---------------------------------------------------
 
         /// <summary>
         /// Gets the DateTime when the Corpus Christi's Holiday ("Corpus Christi") will ocurrs in the given year.
@@ -117,10 +118,6 @@ namespace Holidays
         {
             return new DateTime(DateTime.Today.Year, 11, 15);
         }
-
-        #endregion
-
-        #region HOLIDAY VALIDATION ----------------------------------------------------------------
 
         /// <summary>
         /// Verifies if the current day is a Brazil's national holiday.
