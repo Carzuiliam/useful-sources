@@ -6,7 +6,7 @@ This is a project of a **C# library** that contains a group of useful methods th
 
 - **Holidays**, a library to find holidays for a given year.
 
-You may use only the sources available inside each _sources_ folder on each library folder, if you wish.
+You may use only the sources available inside each *_sources_* folder on each library folder, if you wish.
 
 ## Requirements
 

@@ -6,7 +6,7 @@ Este é o projeto de uma **biblioteca em C#** que contém um grupo de métodos �
 
 - **Holidays**, uma biblioteca para encontrar feriados em um determinado ano.
 
-Você pode utilizar somente os códigos-fonte disponíveis na pasta _sources_ dentro de cada biblioteca, se você desejar.
+Você pode utilizar somente os códigos-fonte disponíveis na pasta *_sources_* dentro de cada biblioteca, se você desejar.
 
 ## Requisitos
 
