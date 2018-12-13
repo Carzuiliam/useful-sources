@@ -8,7 +8,7 @@ namespace Tests
     public class Holidays_Tests
     {
         [TestMethod]
-        public void HolidayBRA_Success()
+        public void HolidayBRA_ReturnTrue()
         {
             DateTime[] dates =
             {
@@ -38,7 +38,7 @@ namespace Tests
         }
 
         [TestMethod]
-        public void HolidayBRA_Failure()
+        public void HolidayBRA_ReturnFalse()
         {
             DateTime[] dates =
             {

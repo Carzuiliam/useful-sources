@@ -2,6 +2,12 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "Microsoft.NET.Test.Sdk/15.9.0": {
+        "type": "package",
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Microsoft.Net.Test.Sdk.props": {}
+        }
+      },
       "Microsoft.NETCore.Platforms/1.1.0": {
         "type": "package",
         "compile": {
@@ -29,6 +35,23 @@
     }
   },
   "libraries": {
+    "Microsoft.NET.Test.Sdk/15.9.0": {
+      "sha512": "T20QjEGchVbKEWdaOTBCgJNac5dtyZ0ophzGKFYJHgpGlHYoiNspdLHgcfCSOEuMWHFCy7oROxzkTW+PxDIKuQ==",
+      "type": "package",
+      "path": "microsoft.net.test.sdk/15.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net45/Microsoft.Net.Test.Sdk.props",
+        "build/net45/Microsoft.Net.Test.Sdk.targets",
+        "build/netcoreapp1.0/Microsoft.Net.Test.Sdk.props",
+        "build/netcoreapp1.0/Microsoft.Net.Test.Sdk.targets",
+        "build/uap10.0/Microsoft.Net.Test.Sdk.props",
+        "buildMultiTargeting/Microsoft.Net.Test.Sdk.props",
+        "microsoft.net.test.sdk.15.9.0.nupkg.sha512",
+        "microsoft.net.test.sdk.nuspec"
+      ]
+    },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "sha512": "bLpT1f/SFlO1CzqXG12KnJzpZs6lv24uX2Rzi4Fmm0noJpNlnWRVryuO3yK18Ca04t/YHcO1e1Z0WDfjseqNzw==",
       "type": "package",
@@ -45,12 +68,11 @@
       ]
     },
     "NETStandard.Library/2.0.3": {
-      "sha512": "R73gEjqCkI2Nw/IlN8QvcgPNklqQiPowp47JwvW0Bnp/RZnjN4UrJwEvWVJWRK1MsQ+HIfGe9i4aQlfK+ei9jA==",
+      "sha512": "st47PosZSHrjECdjeIzZQbzivYBJFv6P2nv4cj2ypdI204DO+vZ7l5raGMiX4eXMJ53RfOIg+/s4DHVZ54Nu2A==",
       "type": "package",
       "path": "netstandard.library/2.0.3",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/netstandard2.0/NETStandard.Library.targets",
@@ -176,6 +198,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "Microsoft.NET.Test.Sdk >= 15.9.0",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -186,11 +209,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\CS\\CS-Util\\Holidays\\Holidays.csproj",
+      "projectUniqueName": "D:\\Projects\\Source Codes\\C#\\CS-Util\\Holidays\\Holidays.csproj",
       "projectName": "Holidays",
-      "projectPath": "D:\\Projects\\CS\\CS-Util\\Holidays\\Holidays.csproj",
+      "projectPath": "D:\\Projects\\Source Codes\\C#\\CS-Util\\Holidays\\Holidays.csproj",
       "packagesPath": "C:\\Users\\Carzuilha\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\CS\\CS-Util\\Holidays\\obj\\",
+      "outputPath": "D:\\Projects\\Source Codes\\C#\\CS-Util\\Holidays\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -220,6 +243,10 @@
     "frameworks": {
       "netstandard2.0": {
         "dependencies": {
+          "Microsoft.NET.Test.Sdk": {
+            "target": "Package",
+            "version": "[15.9.0, )"
+          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
