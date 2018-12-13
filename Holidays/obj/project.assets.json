@@ -209,11 +209,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Source Codes\\C#\\CS-Util\\Holidays\\Holidays.csproj",
+      "projectUniqueName": "D:\\Projects\\Source Codes\\C#\\CS-Utilities\\Holidays\\Holidays.csproj",
       "projectName": "Holidays",
-      "projectPath": "D:\\Projects\\Source Codes\\C#\\CS-Util\\Holidays\\Holidays.csproj",
+      "projectPath": "D:\\Projects\\Source Codes\\C#\\CS-Utilities\\Holidays\\Holidays.csproj",
       "packagesPath": "C:\\Users\\Carzuilha\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Source Codes\\C#\\CS-Util\\Holidays\\obj\\",
+      "outputPath": "D:\\Projects\\Source Codes\\C#\\CS-Utilities\\Holidays\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
