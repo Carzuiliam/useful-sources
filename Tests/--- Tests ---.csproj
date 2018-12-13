@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Holidays\Holidays.csproj" />
+    <ProjectReference Include="..\ViaCEP\ViaCEP.csproj" />
   </ItemGroup>
 
 </Project>

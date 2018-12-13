@@ -204,7 +204,7 @@ namespace Holidays
 
             if (_date == ChristmasFrom(_date.Year))
                 return true;
-
+  
             return false;
         }
 

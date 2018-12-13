@@ -15,3 +15,11 @@ D:\Projects\Source Codes\C#\CS-Utilities\Holidays\obj\Debug\netstandard2.0\Holid
 D:\Projects\Source Codes\C#\CS-Utilities\Holidays\obj\Debug\netstandard2.0\Holidays.AssemblyInfo.cs
 D:\Projects\Source Codes\C#\CS-Utilities\Holidays\obj\Debug\netstandard2.0\Holidays.dll
 D:\Projects\Source Codes\C#\CS-Utilities\Holidays\obj\Debug\netstandard2.0\Holidays.pdb
+D:\Projects\CS\CS-Utilities\Holidays\bin\Debug\netstandard2.0\Holidays.deps.json
+D:\Projects\CS\CS-Utilities\Holidays\bin\Debug\netstandard2.0\Holidays.dll
+D:\Projects\CS\CS-Utilities\Holidays\bin\Debug\netstandard2.0\Holidays.pdb
+D:\Projects\CS\CS-Utilities\Holidays\obj\Debug\netstandard2.0\Holidays.csproj.CoreCompileInputs.cache
+D:\Projects\CS\CS-Utilities\Holidays\obj\Debug\netstandard2.0\Holidays.AssemblyInfoInputs.cache
+D:\Projects\CS\CS-Utilities\Holidays\obj\Debug\netstandard2.0\Holidays.AssemblyInfo.cs
+D:\Projects\CS\CS-Utilities\Holidays\obj\Debug\netstandard2.0\Holidays.dll
+D:\Projects\CS\CS-Utilities\Holidays\obj\Debug\netstandard2.0\Holidays.pdb
