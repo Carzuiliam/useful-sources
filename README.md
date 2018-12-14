@@ -17,4 +17,4 @@ To test the files:
 
 ## Licence
 
-The available source codes here are under the GNU General Public License, version 3.0 (see the attached file _LICENSE_ for more details). Any questions can be submitted to my [email](carloswdecarvalho@outlook.com).
+The available source codes here are under the GNU General Public License, version 3.0 (see the attached file _LICENSE_ for more details). Any questions can be submitted to my email: carloswdecarvalho@outlook.com.
