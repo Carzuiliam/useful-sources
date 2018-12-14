@@ -6,7 +6,7 @@ Este é o projeto de uma **biblioteca em C#** que contém um grupo de métodos �
 
 - **Holidays**, uma biblioteca para encontrar feriados em um determinado ano.
 
-Você pode utilizar somente os códigos-fonte disponíveis na pasta *_sources_* dentro de cada biblioteca, se você desejar.
+Você pode utilizar somente os códigos-fonte disponíveis na pasta `sources` dentro de cada biblioteca, se você desejar.
 
 ## Requisitos
 
@@ -17,4 +17,4 @@ Para testar os arquivos:
 
 ## Licença de Uso
 
-Os códigos disponibilizados aqui estão sob a GNU General Public License, versão 3.0 (veja o arquivo _LICENSE_ em anexo para mais detalhes). Dúvidas sobre a biblioteca podem ser enviadas para o meu e-mail: carloswdecarvalho@outlook.com.
+Os códigos disponibilizados aqui estão sob a GNU General Public License, versão 3.0 (veja o arquivo `LICENSE` em anexo para mais detalhes). Dúvidas sobre a biblioteca podem ser enviadas para o meu e-mail: carloswdecarvalho@outlook.com.
