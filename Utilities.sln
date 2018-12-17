@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ViaCEP", "ViaCEP\ViaCEP.csproj", "{45AE77B8-CC41-4021-83E1-1B885471BFEA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IBPT", "IBPT\IBPT.csproj", "{C30DE616-A186-4B3C-81A8-B6CBC20FE0EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{45AE77B8-CC41-4021-83E1-1B885471BFEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45AE77B8-CC41-4021-83E1-1B885471BFEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45AE77B8-CC41-4021-83E1-1B885471BFEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C30DE616-A186-4B3C-81A8-B6CBC20FE0EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C30DE616-A186-4B3C-81A8-B6CBC20FE0EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C30DE616-A186-4B3C-81A8-B6CBC20FE0EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C30DE616-A186-4B3C-81A8-B6CBC20FE0EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,10 +3,10 @@ using System.Net;
 
 namespace ViaCEP
 {
-    public static class CEPServices
+    public static class CEPService
     {
 
-        #region ViaCEP Services -------------------------------------------------------------------
+        #region ViaCEP Service --------------------------------------------------------------------
 
         /// <summary>
         /// Do a request for the ViaCEP webservice in order to get info about a given CEP.

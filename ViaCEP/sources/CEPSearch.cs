@@ -17,7 +17,7 @@ namespace ViaCEP
         {
             try
             {
-                return JsonConvert.DeserializeObject<CEP>(CEPServices.RequestInfo(_zipcode, CEPTypes.JSON));
+                return JsonConvert.DeserializeObject<CEP>(CEPService.RequestInfo(_zipcode, CEPTypes.JSON));
             }
             catch (CEPException ex)
             {
@@ -40,7 +40,7 @@ namespace ViaCEP
         {
             try
             {
-                return CEPServices.RequestInfo(_zipcode, _type);
+                return CEPService.RequestInfo(_zipcode, _type);
             }
             catch (CEPException ex)
             {

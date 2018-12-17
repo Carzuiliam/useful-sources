@@ -10,7 +10,7 @@ namespace ViaCEP
         #region CEP Elements ----------------------------------------------------------------------
 
         /// <summary>
-        /// The CEP's zipcode ("xxxxx-xxx" format).
+        /// The CEP's zipcode ("código CEP", as "xxxxx-xxx" format).
         /// </summary>
         [JsonProperty(PropertyName = "cep")]
         public string ZipCode { get; set; }
@@ -40,7 +40,7 @@ namespace ViaCEP
         public string City { get; set; }
 
         /// <summary>
-        /// The CEP's UF ("estado" or "UF", 2-character format).
+        /// The CEP's UF ("estado" or "UF", as 2-character format).
         /// </summary>
         [JsonProperty(PropertyName = "uf")]
         public string State { get; set; }
