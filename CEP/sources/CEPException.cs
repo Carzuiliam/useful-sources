@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ViaCEP
+namespace CEP
 {
     public class CEPException : Exception
     {

@@ -1,4 +1,4 @@
-﻿using ViaCEP;
+﻿using CEP;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Tests
 {
     [TestClass]
-    public class ViaCEP_Tests
+    public class CEP_Tests
     {
 
         [TestMethod]

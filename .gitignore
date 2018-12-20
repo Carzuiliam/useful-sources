@@ -1,0 +1,13 @@
+# --- Untrack project folders (from Visual Studio) ---
+
+CEP/bin
+CEP/obj
+
+Holidays/bin
+Holidays/obj
+
+IBPT/bin
+IBPT/obj
+
+Tests/bin
+Tests/obj

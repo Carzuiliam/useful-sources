@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace ViaCEP
+namespace CEP
 {
     [Serializable]
     public class CEP
