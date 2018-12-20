@@ -11,6 +11,11 @@ namespace Holidays
         #region Brazilian Holidays' Dates ---------------------------------------------------------
 
         /// <summary>
+        /// The DateTime when the Good Friday's Holiday ("Sexta-feira Santa") will ocurrs in current year.
+        /// </summary>
+        public static DateTime GoodFriday { get { return GoodFridayFrom(DateTime.Today.Year); } }
+
+        /// <summary>
         /// The DateTime when the Corpus Christi's Holiday ("Corpus Christi") will ocurrs in current year.
         /// </summary>
         public static DateTime CorpusChristi { get { return CorpusChristiFrom(DateTime.Today.Year); } }
@@ -48,6 +53,16 @@ namespace Holidays
         #endregion
 
         #region Brazilian Holidays' Calculation ---------------------------------------------------
+
+        /// <summary>
+        /// Gets the DateTime when the Good Friday's Holiday ("Sexta-feira Santa") will ocurrs in the given year.
+        /// </summary>
+        /// <param name="_year">The year to be used as reference.</param>
+        /// <returns>The DateTime object with the Good Friday's Holiday ("Sexta-feira Santa").</returns>
+        public static DateTime GoodFridayFrom(int _year)
+        {
+            return EasterFrom(_year).AddDays(-2);
+        }
 
         /// <summary>
         /// Gets the DateTime when the Corpus Christi's Holiday ("Corpus Christi") will ocurrs in the given year.
@@ -130,6 +145,9 @@ namespace Holidays
             if (_date == NewYear)
                 return true;
 
+            if (_date == GoodFriday)
+                return true;
+
             if (_date == Easter)
                 return true;
 
@@ -173,6 +191,9 @@ namespace Holidays
             _date = _date.Date;
 
             if (_date == NewYearFrom(_date.Year))
+                return true;
+
+            if (_date == GoodFridayFrom(_date.Year))
                 return true;
 
             if (_date == EasterFrom(_date.Year))

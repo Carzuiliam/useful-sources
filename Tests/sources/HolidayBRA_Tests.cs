@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace Tests
 {
     [TestClass]
-    public class Holidays_Tests
+    public class HolidayBRA_Tests
     {
         [TestMethod]
         public void HolidayBRA_ReturnTrue()
