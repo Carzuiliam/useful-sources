@@ -131,7 +131,7 @@ namespace Holidays
         /// <returns>The DateTime object with the Republic's Holiday ("Proclamação da República").</returns>
         public static DateTime RepublicDayFrom(int _year)
         {
-            return new DateTime(DateTime.Today.Year, 11, 15);
+            return new DateTime(_year, 11, 15);
         }
 
         /// <summary>

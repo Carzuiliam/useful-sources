@@ -101,7 +101,7 @@ namespace Holidays
         /// <returns>The DateTime object with the Christmas' Holiday ("Natal").</returns>
         public static DateTime ChristmasFrom(int _year)
         {
-            return new DateTime(DateTime.Today.Year, 12, 25);
+            return new DateTime(_year, 12, 25);
         }
 
         #endregion
