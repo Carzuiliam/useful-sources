@@ -13,9 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CEP\CEP.csproj" />
-    <ProjectReference Include="..\Holidays\Holidays.csproj" />
-    <ProjectReference Include="..\IBPT\IBPT.csproj" />
+    <ProjectReference Include="..\Utilities\Utilities.csproj" />
   </ItemGroup>
 
 </Project>

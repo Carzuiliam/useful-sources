@@ -1,13 +1,7 @@
-# --- Untrack project folders (from Visual Studio) ---
+# --- Untracked project folders (from Visual Studio) --- #
 
-CEP/bin
-CEP/obj
-
-Holidays/bin
-Holidays/obj
-
-IBPT/bin
-IBPT/obj
+Utilities/bin
+Utilities/obj
 
 Tests/bin
 Tests/obj

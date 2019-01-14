@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Holidays
+namespace Utilities.Holidays
 {
     /// <summary>
     /// This class realizes operations involving commom holidays from the Gregorian calendar.

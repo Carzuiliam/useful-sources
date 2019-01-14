@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace Holidays
+namespace Utilities.Holidays
 {
     public class HolidayUK : Holiday
     {
 
-        #region Brazilian Holidays' Dates ---------------------------------------------------------
+        #region United Kingdom Holidays' Dates ----------------------------------------------------
 
         /// <summary>
         /// The DateTime when the Good Friday's Holiday ("Sexta-feira Santa") will ocurrs in current year.
@@ -39,7 +39,7 @@ namespace Holidays
 
         #endregion
 
-        #region Brazilian Holidays' Calculation ---------------------------------------------------
+        #region United Kingdom Holidays' Calculation ----------------------------------------------
 
         /// <summary>
         /// Gets the DateTime when the Good Friday's Holiday ("Sexta-feira Santa") will ocurrs in the given year.
@@ -120,6 +120,89 @@ namespace Holidays
         public static DateTime BoxingDayFrom(int _year)
         {
             return new DateTime(_year, 12, 26);
+        }
+
+        /// <summary>
+        /// Verifies if the current day is a UK's national holiday.
+        /// </summary>
+        /// <returns>'true' if the current day is a holiday, 'false' otherwise.</returns>
+        public static bool IsHolidayToday()
+        {
+            DateTime _date = DateTime.Today;
+
+            if (_date == NewYear)
+                return true;
+
+            if (_date == GoodFriday)
+                return true;
+
+            if (_date == Easter)
+                return true;
+
+            if (_date == EasterMonday)
+                return true;
+
+            if (_date == Carnival)
+                return true;
+
+            if (_date == EarlyMayBank)
+                return true;
+
+            if (_date == SpringBank)
+                return true;
+
+            if (_date == SummerBank)
+                return true;
+
+            if (_date == Christmas)
+                return true;
+
+            if (_date == BoxingDay)
+                return true;
+
+            return false;
+        }
+
+        /// <summary>
+        /// Verifies if the given DateTime is a UK's national holiday.
+        /// </summary>
+        /// <param name="_date">The date to be analyzed.</param>
+        /// <returns>'true' if the given day is a holiday, 'false' otherwise.</returns>
+        public static bool IsHoliday(DateTime _date)
+        {
+            _date = _date.Date;
+
+            if (_date == NewYearFrom(_date.Year))
+                return true;
+
+            if (_date == GoodFridayFrom(_date.Year))
+                return true;
+
+            if (_date == EasterFrom(_date.Year))
+                return true;
+
+            if (_date == EasterMondayFrom(_date.Year))
+                return true;
+
+            if (_date == CarnivalFrom(_date.Year))
+                return true;
+
+            if (_date == EarlyMayBankFrom(_date.Year))
+                return true;
+
+            if (_date == SpringBankFrom(_date.Year))
+                return true;
+
+            if (_date == SummerBankFrom(_date.Year))
+                return true;
+
+            if (_date == ChristmasFrom(_date.Year))
+                return true;
+
+            if (_date == BoxingDayFrom(_date.Year))
+                return true;
+
+            return false;
         }
 
         #endregion

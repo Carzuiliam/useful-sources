@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Holidays
+namespace Utilities.Holidays
 {
     /// <summary>
     /// This class realizes operations involving default Brazil's holidays.
@@ -137,7 +137,7 @@ namespace Holidays
         /// <summary>
         /// Verifies if the current day is a Brazil's national holiday.
         /// </summary>
-        /// <returns>true if the current day is a holiday, false otherwise.</returns>
+        /// <returns>'true' if the current day is a holiday, 'false' otherwise.</returns>
         public static bool IsHolidayToday()
         {
             DateTime _date = DateTime.Today;
@@ -185,7 +185,7 @@ namespace Holidays
         /// Verifies if the given DateTime is a Brazil's national holiday.
         /// </summary>
         /// <param name="_date">The date to be analyzed.</param>
-        /// <returns>true if the given day is a holiday, false otherwise.</returns>
+        /// <returns>'true' if the given day is a holiday, 'false' otherwise.</returns>
         public static bool IsHoliday(DateTime _date)
         {
             _date = _date.Date;
