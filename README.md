@@ -4,9 +4,10 @@ This is a project of a **C# library** that contains a group of useful methods th
 
 ## Libraries
 
-- **CEP**, a library that uses a webservice (ViaCEP) to get zip codes (CEP's) for brazilian cities.
 - **Holidays**, a simple library to find holidays for a given year.
-- **IBPT**, a library that uses a webservice (IBPT) to get taxes info about brazilian products/services.
+- **PersonalIDs**, a simple library to validate personal documents, e.g. RG and CPF.
+- **TextFormat**, a simple library for string formatting.
+- **ViaCEP**, a library that uses a webservice (ViaCEP) to get zip codes (CEP's) for brazilian cities.
 
 You may use only the sources available inside each `sources` folder on each library folder, if you wish.
 

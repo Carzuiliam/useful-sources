@@ -4,9 +4,10 @@ Este é o projeto de uma **biblioteca em C#** que contém um grupo de métodos �
 
 ## Bibliotecas
 
-- **CEP**, uma biblioteca que utiliza um _webservice_ (ViaCEP) para obter códigos postais (CEP's) de cidades brasileiras.
 - **Holidays**, uma biblioteca simples para encontrar feriados em um determinado ano.
-- **IBPT**, uma biblioteca que utiliza um _webservice_ (IBPT) para obter informações sobre tributos de produtos/serviços brasileiros.
+- **PersonalIDs**, uma biblioteca simples para validar documentos pessoais, e.g. RG e CPF.
+- **TextFormat**, uma biblioteca simples para formatação de strings.
+- **ViaCEP**, uma biblioteca que utiliza um _webservice_ (ViaCEP) para obter códigos postais (CEP's) de cidades brasileiras.
 
 Você pode utilizar somente os códigos-fonte disponíveis na pasta `sources` dentro de cada biblioteca, se você desejar.
 
