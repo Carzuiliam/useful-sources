@@ -128,39 +128,7 @@ namespace Utilities.Holidays
         /// <returns>'true' if the current day is a holiday, 'false' otherwise.</returns>
         public static bool IsHolidayToday()
         {
-            DateTime _date = DateTime.Today;
-
-            if (_date == NewYear)
-                return true;
-
-            if (_date == GoodFriday)
-                return true;
-
-            if (_date == Easter)
-                return true;
-
-            if (_date == EasterMonday)
-                return true;
-
-            if (_date == Carnival)
-                return true;
-
-            if (_date == EarlyMayBank)
-                return true;
-
-            if (_date == SpringBank)
-                return true;
-
-            if (_date == SummerBank)
-                return true;
-
-            if (_date == Christmas)
-                return true;
-
-            if (_date == BoxingDay)
-                return true;
-
-            return false;
+            return IsHoliday(DateTime.Today);
         }
 
         /// <summary>
@@ -203,6 +171,28 @@ namespace Utilities.Holidays
                 return true;
 
             return false;
+        }
+
+        /// <summary>
+        /// Verifies if the current day is a UK's working day.
+        /// </summary>
+        /// <returns>'true' if the given day is a working day, 'false' otherwise.</returns>
+        public static bool IsWorkingDayToday()
+        {
+            return IsWorkingDay(DateTime.Today);
+        }
+
+        /// <summary>
+        /// Verifies if the given DateTime is a UK's working day.
+        /// </summary>
+        /// <param name="_date"></param>
+        /// <returns>'true' if the given day is a working day, 'false' otherwise.</returns>
+        public static bool IsWorkingDay(DateTime _date)
+        {
+            return
+                !(_date.DayOfWeek == DayOfWeek.Saturday) &&
+                !(_date.DayOfWeek == DayOfWeek.Sunday) &&
+                !IsHoliday(_date);
         }
 
         #endregion

@@ -140,45 +140,7 @@ namespace Utilities.Holidays
         /// <returns>'true' if the current day is a holiday, 'false' otherwise.</returns>
         public static bool IsHolidayToday()
         {
-            DateTime _date = DateTime.Today;
-            
-            if (_date == NewYear)
-                return true;
-
-            if (_date == GoodFriday)
-                return true;
-
-            if (_date == Easter)
-                return true;
-
-            if (_date == Carnival)
-                return true;
-
-            if (_date == CorpusChristi)
-                return true;
-
-            if (_date == Tiradentes)
-                return true;
-
-            if (_date == WorkersDay)
-                return true;
-
-            if (_date == IndependenceDay)
-                return true;
-
-            if (_date == HolyMary)
-                return true;
-
-            if (_date == DayOfTheDead)
-                return true;
-
-            if (_date == RepublicDay)
-                return true;
-
-            if (_date == Christmas)
-                return true;
-
-            return false;
+            return IsHoliday(DateTime.Today);
         }
 
         /// <summary>
@@ -228,6 +190,28 @@ namespace Utilities.Holidays
   
             return false;
         }
+
+        /// <summary>
+        /// Verifies if the current day is a Brazil's working day.
+        /// </summary>
+        /// <returns>'true' if the given day is a working day, 'false' otherwise.</returns>
+        public static bool IsWorkingDayToday()
+        {
+            return IsWorkingDay(DateTime.Today);
+        }
+
+        /// <summary>
+        /// Verifies if the given DateTime is a Brazil's working day.
+        /// </summary>
+        /// <param name="_date"></param>
+        /// <returns>'true' if the given day is a working day, 'false' otherwise.</returns>
+        public static bool IsWorkingDay(DateTime _date)
+        {
+            return 
+                !(_date.DayOfWeek == DayOfWeek.Saturday) && 
+                !(_date.DayOfWeek == DayOfWeek.Sunday) && 
+                !IsHoliday(_date);
+        }       
 
         #endregion
 

@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using Utilities.PersonalIDs;
+using Utilities.TextFormat;
 
 namespace Tests
 {
@@ -8,7 +9,7 @@ namespace Tests
     public class Document_Tests
     {
 
-        #region ValidRG Method --------------------------------------------------------------------
+        #region ValidRG() Method ------------------------------------------------------------------
 
         /// <summary>
         /// Tests the 'IsValidRG' method using cases which must return 'true'.
@@ -37,7 +38,7 @@ namespace Tests
 
                 var message = string.Format(
                     newLine + "-----------------------------------" +
-                    newLine + "| Expected for [" + data + "] --> [True]." +
+                    newLine + "| Expected for [" + data + "] --> [True ]." +
                     newLine + "| Obtained for [" + data + "] --> [" + result + " ]." +
                     newLine + "-----------------------------------"
                 );
@@ -84,7 +85,43 @@ namespace Tests
 
         #endregion
 
-        #region ValidCPF Method -------------------------------------------------------------------
+        #region ValidCPF() Method -----------------------------------------------------------------
+
+        /// <summary>
+        /// Tests the 'IsValidCPF' method using cases which must return 'false'.
+        /// </summary>
+        [TestMethod]
+        public void IsValidCPF_ReturnTrue()
+        {
+            string[] dataset =
+            {
+                "412.302.020.80",
+                "525.335.230-97",
+                "315.027-350-16",
+                "984-068-770-06",
+                "341-923-970.05",
+                "785-738.660.04",
+                "402 596 170.91",
+                "295 968 000-60",
+                "142238430 60",
+                "03587071020"
+            };
+
+            foreach (string data in dataset)
+            {
+                var newLine = Environment.NewLine;
+                var result = Document.IsValidCPF(data);
+
+                var message = string.Format(
+                    newLine + "-----------------------------------" +
+                    newLine + "| Expected for [" + data + "] --> [True ]." +
+                    newLine + "| Obtained for [" + data + "] --> [" + result + " ]." +
+                    newLine + "-----------------------------------"
+                );
+
+                Assert.IsTrue(result, message);
+            }
+        }
 
         /// <summary>
         /// Tests the 'IsValidCPF' method using cases which must return 'false'.
@@ -97,7 +134,7 @@ namespace Tests
                 "854-388-290-710",      // Valid, but with more digits.
                 "290.748.040-54",       // Invalid CPF.
                 "650-010-040.97",       // Invalid CPF.
-                "180.470.590-09",       // Invalid CPF.
+                "180.470.590-00",       // Invalid CPF.
                 "9x3.90y.z80-k9",       // Letters and numbers.
                 "abc.def.ghi-jk",       // Only letters.                
                 "@bC.d&F.6H|-;K",       // Special characters.

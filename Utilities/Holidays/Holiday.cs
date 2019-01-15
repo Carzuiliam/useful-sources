@@ -16,14 +16,14 @@ namespace Utilities.Holidays
         public static DateTime NewYear { get { return NewYearFrom(DateTime.Today.Year); } }
 
         /// <summary>
-        /// The DateTime when the Easter's Holiday ("Domingo de Páscoa") will ocurrs in current year.
-        /// </summary>
-        public static DateTime Easter { get { return EasterFrom(DateTime.Today.Year); } }
-
-        /// <summary>
         /// The DateTime when the Carnival ("Carnaval") will ocurrs in current year.
         /// </summary>
         public static DateTime Carnival { get { return CarnivalFrom(DateTime.Today.Year); } }
+
+        /// <summary>
+        /// The DateTime when the Easter's Holiday ("Domingo de Páscoa") will ocurrs in current year.
+        /// </summary>
+        public static DateTime Easter { get { return EasterFrom(DateTime.Today.Year); } }
 
         /// <summary>
         /// The DateTime when the Christmas' Holiday ("Natal") will ocurrs in current year.
@@ -42,6 +42,16 @@ namespace Utilities.Holidays
         public static DateTime NewYearFrom(int _year)
         {
             return new DateTime(_year, 1, 1);
+        }
+
+        /// <summary>
+        /// Gets the DateTime when the Carnival ("Carnaval") will ocurrs in the given year.
+        /// </summary>
+        /// <param name="_year">The year to be used as reference.</param>
+        /// <returns>The DateTime object with the Carnival's Holiday ("Carnaval").</returns>
+        public static DateTime CarnivalFrom(int _year)
+        {
+            return EasterFrom(_year).AddDays(-47);
         }
 
         /// <summary>
@@ -82,17 +92,6 @@ namespace Utilities.Holidays
 
             return easter;
         }
-
-        /// <summary>
-        /// Gets the DateTime when the Carnival ("Carnaval") will ocurrs in the given year.
-        /// </summary>
-        /// <param name="_year">The year to be used as reference.</param>
-        /// <returns>The DateTime object with the Carnival's Holiday ("Carnaval").</returns>
-        public static DateTime CarnivalFrom(int _year)
-        {
-            return EasterFrom(_year).AddDays(-47);
-        }
-
 
         /// <summary>
         /// Gets the DateTime when the Christmas' Holiday ("Natal") will ocurrs in the given year.

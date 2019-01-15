@@ -1,4 +1,5 @@
-﻿using Utilities.TextFormat;
+﻿using System;
+using Utilities.TextFormat;
 
 namespace Utilities.PersonalIDs
 {
@@ -54,41 +55,44 @@ namespace Utilities.PersonalIDs
                 int sum = 0;
                 int rest = 0;
 
-                string mainDigits = string.Empty;
-                string verifierDigit = string.Empty;
-                string cpf = Format.AsDigitsOnly(_cpf);
+                string auxCpf = string.Empty;
+                string digits = string.Empty;
 
                 int[] factors1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
                 int[] factors2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+                
+                _cpf = Format.AsDigitsOnly(_cpf);
 
                 if (_cpf.Length != 11)
                 {
                     return false;
-                }
+                }                    
 
-                mainDigits = cpf.Substring(0, 9);
+                auxCpf = _cpf.Substring(0, 9);
 
                 for (int i = 0; i < 9; i++)
                 {
-                    sum += int.Parse(mainDigits[i].ToString()) * factors1[i];
-                }
+                    sum += int.Parse(auxCpf[i].ToString()) * factors1[i];
+                }                    
 
-                rest = ((sum % 11) < 2) ? 0 : 11 - (sum % 11);
+                rest = sum % 11;
+                rest = (rest >= 2) ? 11 - rest : 0;
+
                 sum = 0;
-
-                verifierDigit = rest.ToString();
-                mainDigits = mainDigits + verifierDigit;
-
+                digits += rest;
+                auxCpf += digits;
+                
                 for (int i = 0; i < 10; i++)
                 {
-                    sum += int.Parse(mainDigits[i].ToString()) * factors2[i];
+                    sum += int.Parse(auxCpf[i].ToString()) * factors2[i];
                 }
 
-                rest = ((sum % 11) < 2) ? 0 : 11 - (sum % 11);
+                rest = sum % 11;
+                rest = (rest >= 2) ? 11 - rest : 0;
 
-                verifierDigit = verifierDigit + rest.ToString();
+                digits += rest;
 
-                return _cpf.EndsWith(verifierDigit);
+                return _cpf.EndsWith(digits);
             }
 
             return false;
