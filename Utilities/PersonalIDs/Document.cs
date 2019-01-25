@@ -9,10 +9,10 @@ namespace Utilities.PersonalIDs
         #region RG's Operations -------------------------------------------------------------------
 
         /// <summary>
-        /// 
+        /// Verifies if a given RG ("Registro Geral") is valid.
         /// </summary>
-        /// <param name="_rg"></param>
-        /// <returns></returns>
+        /// <param name="_rg">The RG number as a string.</param>
+        /// <returns>'true' if the RG is valid, 'false' otherwise.</returns>
         public static bool IsValidRG(string _rg)
         {
             if (!string.IsNullOrEmpty(_rg))
@@ -44,10 +44,10 @@ namespace Utilities.PersonalIDs
         #region CPF's Operations ------------------------------------------------------------------
 
         /// <summary>
-        /// 
+        /// Verifies if a given CPF ("Cadastro de Pessoa Física") is valid.
         /// </summary>
-        /// <param name="_cpf"></param>
-        /// <returns></returns>
+        /// <param name="_cpf">The RG number as a string.</param>
+        /// <returns>'true' if the RG is valid, 'false' otherwise.</returns>
         public static bool IsValidCPF(string _cpf)
         {
             if (!string.IsNullOrEmpty(_cpf))

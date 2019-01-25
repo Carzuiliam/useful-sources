@@ -105,7 +105,7 @@ namespace Tests
                 }
             };
 
-            foreach (CEP data in dataset)
+            foreach (var data in dataset)
             {
                 var newLine = Environment.NewLine;
                 var result = CEPSearch.ByZipCode(data.ZipCode);
@@ -136,7 +136,7 @@ namespace Tests
                     newLine + "-----------------------------------"
                 );
 
-                Assert.IsTrue(data.Equals(result), message);
+                Assert.IsTrue((data == result), message);
             }
         }
 
@@ -235,7 +235,7 @@ namespace Tests
                 }
             };
 
-            foreach (CEP data in dataset)
+            foreach (var data in dataset)
             {
                 var newLine = Environment.NewLine;
                 var result = CEPSearch.ByZipCode(data.ZipCode);
@@ -267,7 +267,7 @@ namespace Tests
                     data.ZipCode
                 );
 
-                Assert.IsFalse(data == result, message);
+                Assert.IsFalse((data == result), message);
             }
         }
 
@@ -289,7 +289,7 @@ namespace Tests
                 new CEP(),                              // Empty CEP.
             };
 
-            foreach (CEP data in dataset)
+            foreach (var data in dataset)
             {
                 try
                 {

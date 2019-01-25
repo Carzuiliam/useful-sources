@@ -1,7 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using Utilities.PersonalIDs;
-using Utilities.TextFormat;
 
 namespace Tests
 {
@@ -31,7 +30,7 @@ namespace Tests
                 "411144625"
             };
 
-            foreach (string data in dataset)
+            foreach (var data in dataset)
             {
                 var newLine = Environment.NewLine;
                 var result = Document.IsValidRG(data);
@@ -67,7 +66,7 @@ namespace Tests
                 null                    // Null value.
             };
 
-            foreach (string data in dataset)
+            foreach (var data in dataset)
             {
                 var newLine = Environment.NewLine;
                 var result = Document.IsValidRG(data);
@@ -107,7 +106,7 @@ namespace Tests
                 "03587071020"
             };
 
-            foreach (string data in dataset)
+            foreach (var data in dataset)
             {
                 var newLine = Environment.NewLine;
                 var result = Document.IsValidCPF(data);
@@ -143,7 +142,7 @@ namespace Tests
                 null                    // Null value.
             };
 
-            foreach (string data in dataset)
+            foreach (var data in dataset)
             {
                 var newLine = Environment.NewLine;
                 var result = Document.IsValidCPF(data);

@@ -31,7 +31,7 @@ namespace Tests
                 DateTime.MinValue               // 01/01/0001.
             };
 
-            foreach (DateTime data in dataset)
+            foreach (var data in dataset)
             {
                 var newLine = Environment.NewLine;
                 var result = HolidayBRA.IsHoliday(data);
@@ -67,7 +67,7 @@ namespace Tests
                 DateTime.MaxValue               // 31/12/9999.
             };
 
-            foreach (DateTime data in dataset)
+            foreach (var data in dataset)
             {
                 var newLine = Environment.NewLine;
                 var result = HolidayBRA.IsHoliday(data);
@@ -107,7 +107,7 @@ namespace Tests
                 DateTime.MaxValue               // 31/12/9999.
             };
 
-            foreach (DateTime data in dataset)
+            foreach (var data in dataset)
             {
                 var newLine = Environment.NewLine;
                 var result = HolidayBRA.IsWorkingDay(data);
@@ -144,7 +144,7 @@ namespace Tests
                 DateTime.MinValue               // 01/01/0001.
             };
 
-            foreach (DateTime data in dataset)
+            foreach (var data in dataset)
             {
                 var newLine = Environment.NewLine;
                 var result = HolidayBRA.IsWorkingDay(data);
