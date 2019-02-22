@@ -5,7 +5,7 @@ using Utilities.Holidays;
 namespace Tests
 {
     [TestClass]
-    public class HolidayBRA_Tests
+    public class Holidays_Tests
     {
 
         #region IsHoliday() Method ----------------------------------------------------------------

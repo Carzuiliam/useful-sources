@@ -6,7 +6,7 @@ using Utilities.ViaCEP;
 namespace Tests
 {
     [TestClass]
-    public class CEP_Tests
+    public class ViaCEP_Tests
     {
 
         #region CEPSearch Method ------------------------------------------------------------------
@@ -267,7 +267,7 @@ namespace Tests
                     data.ZipCode
                 );
 
-                Assert.IsFalse((data == result), message);
+                Assert.IsFalse(data == result, message);
             }
         }
 

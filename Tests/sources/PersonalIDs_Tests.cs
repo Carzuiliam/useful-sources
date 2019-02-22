@@ -5,7 +5,7 @@ using Utilities.PersonalIDs;
 namespace Tests
 {
     [TestClass]
-    public class Document_Tests
+    public class PersonalIDs_Tests
     {
 
         #region ValidRG() Method ------------------------------------------------------------------

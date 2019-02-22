@@ -6,7 +6,7 @@ using Utilities.TextFormat;
 namespace Tests
 {
     [TestClass]
-    public class Format_Tests
+    public class TextFormat_Tests
     {
 
         #region AsLettersOnly() Method ------------------------------------------------------------
@@ -20,15 +20,15 @@ namespace Tests
             KeyValuePair<string, string>[] dataset =
             {
                 new KeyValuePair<string, string>("abcdefghij", "abcdefghij"),   // Lower letters
-                new KeyValuePair<string, string>("YHHSWFIFRK", "YHHSWFIFRK"),   // Upper letters
                 new KeyValuePair<string, string>("WpuKmIcOTc", "WpuKmIcOTc"),   // Upper and lower letters
                 new KeyValuePair<string, string>("Xs3Xu9pgkz", "XsXupgkz"),     // With numbers
                 new KeyValuePair<string, string>("JM;xk.laeP", "JMxklaeP"),     // With special chars
-                new KeyValuePair<string, string>("&}}KqTl@;C5", "KqTlC"),       // With numbers and special chars
+                new KeyValuePair<string, string>("&}}KqTl@;C5", "KqTlC"),       // With numbers and special characters
                 new KeyValuePair<string, string>("@u?1e\nLEbj", "ueLEbj"),      // With numbers, special chars and escapes
                 new KeyValuePair<string, string>("CXI-4208", "CXI"),            // Vehicle plate
                 new KeyValuePair<string, string>("12345", string.Empty),        // Only numbers
-                new KeyValuePair<string, string>("", string.Empty)              // Empty text
+                new KeyValuePair<string, string>("", string.Empty),             // Empty text
+                new KeyValuePair<string, string>(string.Empty, string.Empty)    // Empty text
             };
 
             foreach (var data in dataset)
@@ -43,7 +43,39 @@ namespace Tests
                     newLine + "-----------------------------------"
                 );
 
-                Assert.IsTrue((data.Value == result), message);
+                Assert.IsTrue(data.Value == result, message);
+            }
+        }
+
+        /// <summary>
+        /// Tests the 'AsLettersOnly' method using cases which must return 'false'.
+        /// </summary>
+        [TestMethod]
+        public void AsLettersOnly_ReturnFalse()
+        {
+            KeyValuePair<string, string>[] dataset =
+            {
+                new KeyValuePair<string, string>("a", string.Empty),                            // Lower letter
+                new KeyValuePair<string, string>("B", string.Empty),                            // Upper letter
+                new KeyValuePair<string, string>("cD", string.Empty),                           // Lower and upper letters
+                new KeyValuePair<string, string>("0", "0"),                                     // Lower letters
+                new KeyValuePair<string, string>("!", "!"),                                     // Special characters
+                new KeyValuePair<string, string>(Environment.NewLine, Environment.NewLine),     // Special characters
+            };
+
+            foreach (var data in dataset)
+            {
+                var newLine = Environment.NewLine;
+                var result = Format.AsLettersOnly(data.Key);
+
+                var message = string.Format(
+                    newLine + "-----------------------------------" +
+                    newLine + "| Expected for [" + data.Key + "] --> [" + data.Value + "]." +
+                    newLine + "| Obtained for [" + data.Key + "] --> [" + result + "]." +
+                    newLine + "-----------------------------------"
+                );
+
+                Assert.IsFalse(data.Value == result, message);
             }
         }
 
