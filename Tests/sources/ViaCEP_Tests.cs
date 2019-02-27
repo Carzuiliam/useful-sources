@@ -12,10 +12,11 @@ namespace Tests
         #region CEPSearch Method ------------------------------------------------------------------
 
         /// <summary>
-        /// Tests the 'CEPSearch' method using cases which must return 'true'.
+        ///  Tests the 'CEPSearch' method using cases that must match. Note that the CEP's can match
+        /// even if detailed info are missing.
         /// </summary>
         [TestMethod]
-        public void CEPSearch_ReturnTrue()
+        public void CEPSearch_AreEqual()
         {
             var dataset = new List<CEP>()
             {
@@ -136,143 +137,12 @@ namespace Tests
                     newLine + "-----------------------------------"
                 );
 
-                Assert.IsTrue((data == result), message);
+                Assert.AreEqual(result, data, message);
             }
         }
 
         /// <summary>
-        /// Tests the 'CEPSearch' method using cases which must return 'false'.
-        /// </summary>
-        [TestMethod]
-        public void CEPSearch_ReturnFalse()
-        {
-            var dataset = new List<CEP>()
-            {
-                // Fully address, wrong "Complement" ("251").
-                new CEP()
-                {
-                    ZipCode = "50010-905",
-                    Address = "Rua Siqueira Campos",
-                    Complement = "250", 
-                    Neighborhood = "Santo Antônio",
-                    City = "Recife",
-                    State = "PE",
-                    Unity = "",
-                    IBGE = "2611606",
-                    GIA = "(vazio)"
-                },
-
-                // Without "Unity", wrong "Address" ("Rua Campos Salles").
-                new CEP()
-                {
-                    ZipCode = "19020-730",
-                    Address = "Avenida Alberto Bins",
-                    Complement = "(vazio)",
-                    Neighborhood = "Vila Santa Izabel",
-                    City = "Presidente Prudente",
-                    State = "SP",
-                    IBGE = "3541406",
-                    GIA = "5629"
-                },
-
-                // Without "Unity" and "GIA", wrong "Neighborhood" ("Penha").
-                new CEP()
-                {
-                    ZipCode = "21020-190",
-                    Address = "Rua Conde de Agrolongo",
-                    Complement = "(vazio)",
-                    Neighborhood = "Baile do Denis",
-                    City = "Rio de Janeiro",
-                    State = "RJ",
-                    IBGE = "3304557"
-                },
-
-                // Without "Complement", "Unity" and "GIA", wrong "City" ("Fortaleza").
-                new CEP()
-                {
-                    ZipCode = "60020-190",
-                    Address = "Rua Caio Carlos",
-                    Neighborhood = "Benfica",
-                    City = "Imperatriz",
-                    State = "CE",
-                    IBGE = "2304400"
-                },
-
-                // Without "Complement", "Neighborhood", "Unity" and "GIA", wrong "State" ("DF").
-                new CEP()
-                {
-                    ZipCode = "70100-000",
-                    Address = "Praça dos Três Poderes",
-                    City = "Brasília",
-                    State = "GO",
-                    IBGE = "5300108"
-                },
-
-                // Only "ZipCode", "Address", "City", "State" and "IBGE", wrong "IBGE" ("1302603").
-                new CEP()
-                {
-                    ZipCode = "69005-140",
-                    Address = "Avenida 7 de Setembro",
-                    City = "Manaus",
-                    State = "AM",
-                    IBGE = "100001"
-                },
-                
-                // Only "ZipCode", "City" and "State", wrong "City" and "State" ("Santo Anastácio", "SP").
-                new CEP()
-                {
-                    ZipCode = "19360-000",
-                    City = "Ribeirão dos Índios",
-                    State = "PR"
-                },
-
-                // Only "ZipCode", "City" and "State", wrong "City" and "State" ("Santo Anastácio", "SP").
-                new CEP()
-                {
-                    ZipCode = "19400-000",
-                    City = "Nazareno",
-                    State = "MG"
-                }
-            };
-
-            foreach (var data in dataset)
-            {
-                var newLine = Environment.NewLine;
-                var result = CEPSearch.ByZipCode(data.ZipCode);
-
-                var message = string.Format(
-                    newLine +
-                    newLine + "-----------------------------------" +
-                    newLine + "| Expected for [" + data.ZipCode + "] --> [False]" +
-                    newLine + "|" +
-                    newLine + "| - " + data.Address +
-                    newLine + "| - " + data.Complement +
-                    newLine + "| - " + data.Neighborhood +
-                    newLine + "| - " + data.City +
-                    newLine + "| - " + data.State +
-                    newLine + "| - " + data.Unity +
-                    newLine + "| - " + data.IBGE +
-                    newLine + "| - " + data.GIA +
-                    newLine + "|" +
-                    newLine + "| Obtained for [" + data.ZipCode + "] --> [True]" +
-                    newLine + "| - " + result.Address +
-                    newLine + "| - " + result.Complement +
-                    newLine + "| - " + result.Neighborhood +
-                    newLine + "| - " + result.City +
-                    newLine + "| - " + result.State +
-                    newLine + "| - " + result.Unity +
-                    newLine + "| - " + result.IBGE +
-                    newLine + "| - " + result.GIA,
-                    newLine + "-----------------------------------",
-                    data.ZipCode
-                );
-
-                Assert.IsFalse(data == result, message);
-            }
-        }
-
-        /// <summary>
-        /// Tests the 'CEPSearch' method using cases that must throws exceptions.
+        ///  Tests the 'CEPSearch' method using cases that must throws exceptions.
         /// </summary>
         [TestMethod]
         public void CEPSearch_ThrowException()
