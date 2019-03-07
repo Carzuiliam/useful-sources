@@ -6,7 +6,7 @@ namespace Utilities.PersonalIDs
     public class Document
     {
 
-        #region RG's Operations -------------------------------------------------------------------
+        #region Validating ------------------------------------------------------------------------
 
         /// <summary>
         /// Verifies if a given RG ("Registro Geral") is valid.
@@ -38,10 +38,6 @@ namespace Utilities.PersonalIDs
 
             return false;
         }
-
-        #endregion
-
-        #region CPF's Operations ------------------------------------------------------------------
 
         /// <summary>
         /// Verifies if a given CPF ("Cadastro de Pessoa Física") is valid.
@@ -93,6 +89,61 @@ namespace Utilities.PersonalIDs
                 digits += rest;
 
                 return _cpf.EndsWith(digits);
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Verifies if a given CNPJ ("Cadastro Nacional de Pessoa Jurídica") is valid.
+        /// </summary>
+        /// <param name="_cnpj">The CNPJ number as a string.</param>
+        /// <returns>'true' if the CNPJ is valid, 'false' otherwise.</returns>
+        public static bool IsValidCNPJ(string _cnpj)
+        {
+            if (!string.IsNullOrEmpty(_cnpj))
+            {
+                int sum = 0;
+                int rest = 0;
+
+                string axCnpj = string.Empty;
+                string digits = string.Empty;
+
+                int[] factors1 = new int[12] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
+                int[] factors2 = new int[13] { 6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
+
+                _cnpj = Format.AsDigitsOnly(_cnpj);
+
+                if (_cnpj.Length != 14)
+                {
+                    return false;
+                }
+
+                axCnpj = _cnpj.Substring(0, 12);
+
+                for (int i = 0; i < 12; i++)
+                {
+                    sum += int.Parse(axCnpj[i].ToString()) * factors1[i];
+                }
+
+                rest = sum % 11;
+                rest = (rest >= 2) ? 11 - rest : 0;
+
+                sum = 0;
+                digits += rest;
+                axCnpj += digits;
+
+                for (int i = 0; i < 13; i++)
+                {
+                    sum += int.Parse(axCnpj[i].ToString()) * factors2[i];
+                }
+
+                rest = sum % 11;
+                rest = (rest >= 2) ? 11 - rest : 0;
+
+                digits += rest;
+
+                return _cnpj.EndsWith(digits);
             }
 
             return false;

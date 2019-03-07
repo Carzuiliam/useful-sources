@@ -5,7 +5,7 @@ This is a project of a **C# library** that contains a group of useful methods th
 ## Libraries
 
 - **Holidays**, a simple library to find holidays for a given year.
-- **PersonalIDs**, a simple library to validate personal documents, e.g. RG and CPF.
+- **PersonalIDs**, a simple library to validate personal documents, e.g. RG, CPF and CNPJ.
 - **TextFormat**, a simple library for string formatting.
 - **ViaCEP**, a library that uses a webservice (ViaCEP) to get zip codes (CEP's) for brazilian cities.
 

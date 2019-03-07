@@ -7,6 +7,7 @@ namespace Utilities.ViaCEP
     /// </summary>
     public class CEPException : Exception
     {
+
         #region CEP Exception Messages ------------------------------------------------------------
 
         /// <summary>

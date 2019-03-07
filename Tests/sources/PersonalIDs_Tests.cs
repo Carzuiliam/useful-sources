@@ -8,7 +8,7 @@ namespace Tests
     public class PersonalIDs_Tests
     {
 
-        #region ValidRG() Method ------------------------------------------------------------------
+        #region IsValidRG() Method ----------------------------------------------------------------
 
         /// <summary>
         /// Tests the 'IsValidRG' method using cases which must return 'true'.
@@ -38,7 +38,7 @@ namespace Tests
                 var message = string.Format(
                     newLine + "-----------------------------------" +
                     newLine + "| Expected for [" + data + "] --> [True ]." +
-                    newLine + "| Obtained for [" + data + "] --> [" + result + " ]." +
+                    newLine + "| Obtained for [" + data + "] --> [" + result + "]." +
                     newLine + "-----------------------------------"
                 );
 
@@ -84,10 +84,10 @@ namespace Tests
 
         #endregion
 
-        #region ValidCPF() Method -----------------------------------------------------------------
+        #region IsValidCPF() Method ---------------------------------------------------------------
 
         /// <summary>
-        /// Tests the 'IsValidCPF' method using cases which must return 'false'.
+        /// Tests the 'IsValidCPF' method using cases which must return 'true'.
         /// </summary>
         [TestMethod]
         public void IsValidCPF_ReturnTrue()
@@ -114,7 +114,7 @@ namespace Tests
                 var message = string.Format(
                     newLine + "-----------------------------------" +
                     newLine + "| Expected for [" + data + "] --> [True ]." +
-                    newLine + "| Obtained for [" + data + "] --> [" + result + " ]." +
+                    newLine + "| Obtained for [" + data + "] --> [" + result + "]." +
                     newLine + "-----------------------------------"
                 );
 
@@ -146,6 +146,82 @@ namespace Tests
             {
                 var newLine = Environment.NewLine;
                 var result = Document.IsValidCPF(data);
+
+                var message = string.Format(
+                    newLine + "-----------------------------------" +
+                    newLine + "| Expected for [" + data + "] --> [False]." +
+                    newLine + "| Obtained for [" + data + "] --> [" + result + " ]." +
+                    newLine + "-----------------------------------"
+                );
+
+                Assert.IsFalse(result, message);
+            }
+        }
+
+        #endregion
+
+        #region IsValidCNPJ() Method --------------------------------------------------------------
+
+        /// <summary>
+        /// Tests the 'IsValidCNPJ' method using cases which must return 'true'.
+        /// </summary>
+        [TestMethod]
+        public void IsValidCNPJ_ReturnTrue()
+        {
+            string[] dataset =
+            {
+                "70.712.730.0001.09",
+                "48.438.704.0001-77",
+                "57.606.871.0001/70",
+                "71.345.033/0001-11",
+                "49.314/165/0001-27",
+                "52/174/742.0001-37",
+                "06-811/172 0001 21",
+                "18 999 451 0001 40",
+                "62323445 0001 60",
+                "93800037000185"
+            };
+
+            foreach (var data in dataset)
+            {
+                var newLine = Environment.NewLine;
+                var result = Document.IsValidCNPJ(data);
+
+                var message = string.Format(
+                    newLine + "-----------------------------------" +
+                    newLine + "| Expected for [" + data + "] --> [True ]." +
+                    newLine + "| Obtained for [" + data + "] --> [" + result + "]." +
+                    newLine + "-----------------------------------"
+                );
+
+                Assert.IsTrue(result, message);
+            }
+        }
+
+        /// <summary>
+        /// Tests the 'IsValidCNPJ' method using cases which must return 'false'.
+        /// </summary>
+        [TestMethod]
+        public void IsValidCNPJ_ReturnFalse()
+        {
+            string[] dataset =
+            {
+                "01.961.828/0001-794",  // Valid, but with more digits.
+                "06.537.940/0005-09",   // Invalid CNPJ.
+                "18.455.241/4001-91",   // Invalid CPF.
+                "11.598.430/4321-88",   // Invalid CPF.
+                "a2.7b4.f35-e001-d3",   // Letters and numbers.
+                "ab.cde.fgh/ijkl-mn",   // Only letters.                
+                "@#.%!!.--&/++++-;:",   // Special characters.
+                "888.538.890-63",       // Valid, but CPF.
+                string.Empty,           // Empty string.
+                null                    // Null value.
+            };
+
+            foreach (var data in dataset)
+            {
+                var newLine = Environment.NewLine;
+                var result = Document.IsValidCNPJ(data);
 
                 var message = string.Format(
                     newLine + "-----------------------------------" +

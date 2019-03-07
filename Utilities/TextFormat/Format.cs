@@ -4,6 +4,7 @@ namespace Utilities.TextFormat
 {
     public static class Format
     {
+
         #region Removing Specific Characters ------------------------------------------------------
 
         /// <summary>

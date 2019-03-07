@@ -5,7 +5,7 @@ Este é o projeto de uma **biblioteca em C#** que contém um grupo de métodos �
 ## Bibliotecas
 
 - **Holidays**, uma biblioteca simples para encontrar feriados em um determinado ano.
-- **PersonalIDs**, uma biblioteca simples para validar documentos pessoais, e.g. RG e CPF.
+- **PersonalIDs**, uma biblioteca simples para validar documentos pessoais, e.g. RG, CPF and CNPJ.
 - **TextFormat**, uma biblioteca simples para formatação de strings.
 - **ViaCEP**, uma biblioteca que utiliza um _webservice_ (ViaCEP) para obter códigos postais (CEP's) de cidades brasileiras.
 
