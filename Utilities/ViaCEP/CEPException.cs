@@ -3,7 +3,7 @@
 namespace Utilities.ViaCEP
 {
     /// <summary>
-    /// 
+    /// This class represents an exception threw by the ViaCEP webservice.
     /// </summary>
     public class CEPException : Exception
     {

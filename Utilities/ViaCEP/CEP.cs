@@ -6,7 +6,7 @@ using Utilities.TextFormat;
 namespace Utilities.ViaCEP
 {
     /// <summary>
-    /// 
+    /// This class represents a CEP object that were obtained from the ViaCEP webservice.
     /// </summary>
     [Serializable]
     public class CEP

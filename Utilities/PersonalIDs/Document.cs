@@ -3,6 +3,9 @@ using Utilities.TextFormat;
 
 namespace Utilities.PersonalIDs
 {
+    /// <summary>
+    /// This class validates some of personal id's, used by people from Brazil in general.
+    /// </summary>
     public class Document
     {
 

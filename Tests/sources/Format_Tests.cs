@@ -6,7 +6,7 @@ using Utilities.TextFormat;
 namespace Tests
 {
     [TestClass]
-    public class TextFormat_Tests
+    public class Format_Tests
     {
 
         #region AsLettersOnly() Method ------------------------------------------------------------

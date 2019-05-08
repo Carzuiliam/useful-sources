@@ -2,6 +2,9 @@
 
 namespace Utilities.Holidays
 {
+    /// <summary>
+    /// This class realizes operations involving default UK's holidays.
+    /// </summary>
     public class HolidayUK : Holiday
     {
 

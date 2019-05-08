@@ -6,7 +6,7 @@ using Utilities.TextFormat;
 namespace Utilities.ViaCEP
 {
     /// <summary>
-    /// 
+    /// This class searches info about a given CEP, querying the ViaCEP webservice.
     /// </summary>
     public static class CEPSearch
     {

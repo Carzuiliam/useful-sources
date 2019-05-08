@@ -6,7 +6,7 @@ using Utilities.ViaCEP;
 namespace Tests
 {
     [TestClass]
-    public class ViaCEP_Tests
+    public class CEPSearch_Tests
     {
 
         #region CEPSearch Method ------------------------------------------------------------------
@@ -133,7 +133,7 @@ namespace Tests
                     newLine + "| - " + result.State +
                     newLine + "| - " + result.Unity +
                     newLine + "| - " + result.IBGE +
-                    newLine + "| - " + result.GIA,
+                    newLine + "| - " + result.GIA +
                     newLine + "-----------------------------------"
                 );
 
