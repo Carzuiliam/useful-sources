@@ -1,23 +1,30 @@
-# Códigos Fontes Úteis
+# Códigos Úteis em C\#
 
-Este é o projeto de uma **biblioteca em C#** que contém um grupo de métodos úteis que eu costumo utilizar em **sistemas ERP** quando necessário.
+Neste projeto estão alguns exemplos de códigos que costumo utilizar em sistemas ERP quando necessário. Tenha em mente que estes códigos são, geralmente, para sistemas desenvolvidos no Brasil.
 
-## Bibliotecas
+## Introdução
 
-- **Holidays**, uma biblioteca simples para encontrar feriados em um determinado ano.
-- **PersonalIDs**, uma biblioteca simples para validar documentos pessoais, e.g. RG, CPF and CNPJ.
-- **TextFormat**, uma biblioteca simples para formatação de strings.
-- **ViaCEP**, uma biblioteca que utiliza um _webservice_ (ViaCEP) para obter códigos postais (CEP's) de cidades brasileiras.
+Os códigos presentes neste projeto são:
 
-Você pode utilizar somente os códigos-fonte disponíveis na pasta `sources` dentro de cada biblioteca, se você desejar.
+- [**Holidays**](Utilities/Holidays), com códigos para a manipulação de feriados brasileiros e britânicos;
+- [**NTPClient**](Utilities/NTPClient), que mostra um exemplo de como obter a data/hora atual diretamente dos servidores da Microsoft;
+- [**PersonalIDs**](Utilities/PersonalIDs), para validação de documentos no Brasil, e.g. RG, CPF e CNPJ;
+- [**TextFormat**](TextFormat), para a formatação de textos;
+- [**ViaCEP**](ViaCEP), que utiliza o _webservice_ [ViaCEP](https://viacep.com.br/) para a requisição de CEP's.
 
-## Requisitos
+São códigos simples, mas eles podem ser úteis em pequenos problemas do dia-a-dia. Por fim, você pode utilizar somente os códigos-fonte disponíveis na pasta `sources`, se desejar.
 
-Para testar os arquivos:
+## Materiais Utilizados
 
-- **Visual Studio 2017** ou superior, disponível em https://visualstudio.microsoft.com/downloads/.
-- **.NET Framework 3.5** ou superior.
+Você pode testar os códigos acima com o Visual Studio. Para isso, é necessário:
+
+- [**Visual Studio 2017**](https://visualstudio.microsoft.com/downloads/) ou superior;
+- [**.NET Framework 3.5**](https://www.microsoft.com/en-us/download/confirmation.aspx?id=21) ou superior, caso este não venha junto com o Visual Studio.
+
+## Informações Adicionais
+
+Como isso é um trabalho em progresso, provavelmente adicionarei mais coisas futuramente. Fique atento!
 
 ## Licença de Uso
 
-Os códigos disponibilizados aqui estão sob a GNU General Public License, versão 3.0 (veja o arquivo `LICENSE` em anexo para mais detalhes). Dúvidas sobre a biblioteca podem ser enviadas para o meu e-mail: carloswdecarvalho@outlook.com.
+Os códigos disponibilizados aqui estão sob a GNU General Public License, versão 3.0 (veja o arquivo `LICENSE` em anexo para mais detalhes). Dúvidas sobre este projeto podem ser enviadas para o meu e-mail: carloswdecarvalho@outlook.com.
